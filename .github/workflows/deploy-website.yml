@@ -19,18 +19,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "pnpm"
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+
+      - uses: pnpm/action-setup@v2
         with:
           version: 10.15.1
+
       - name: Install dependencies
         run: pnpm install
+
       - name: Build website
         run: pnpm build:website
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
