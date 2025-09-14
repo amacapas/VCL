@@ -1,0 +1,25 @@
+{
+  "name": "villanueva-lab",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Villanueva Clinical Laboratory",
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:admin": "turbo run dev --filter=admin",
+    "dev:patient": "turbo run dev --filter=patient",
+    "dev:website": "turbo run dev --filter=website",
+    "build": "turbo run build",
+    "build:admin": "turbo run build --filter=admin",
+    "build:patient": "turbo run build --filter=patient",
+    "build:website": "turbo run build --filter=website",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "keywords": ["administrative", "patient", "clinical", "medical", "laboratory"],
+  "author": "Ariel M",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "dependencies": {
+    "turbo": "^2.5.6"
+  }
+}
