@@ -29,10 +29,14 @@ jobs:
           version: 10.15.1
 
       - name: Install dependencies
-        run: pnpm install
+        run: |
+          pnpm install
+          cd apps/website
+          pnpm install
 
       - name: Build website
-        run: pnpm build:website
+        working-directory: ./apps/website
+        run: pnpm build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
