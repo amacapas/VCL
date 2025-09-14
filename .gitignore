@@ -15,7 +15,7 @@ dist
 build
 .turbo
 .next
-out
+# out
 coverage
 
 # Logs
